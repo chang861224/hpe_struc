@@ -1,0 +1,6 @@
+[submodule "src/struc2vec"]
+	path = src/struc2vec
+	url = git@github.com:chang861224/struc2vec_cpp.git
+[submodule "src/smore"]
+	path = src/smore
+	url = git@github.com:cnclabs/smore.git
