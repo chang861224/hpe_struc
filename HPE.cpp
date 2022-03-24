@@ -1,6 +1,6 @@
 #define _GLIBCXX_USE_CXX11_ABI 1
 #include <cstdlib>
-#include "src/HPE.h"
+#include "src/hpe.h"
 #include "src/struc.h"
 
 int ArgPos(char *str, int argc, char **argv) {
