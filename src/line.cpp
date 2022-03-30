@@ -6,8 +6,8 @@ LINE::LINE() {
 LINE::~LINE() {
 }
 
-void LINE::LoadEdgeList(string filename, bool undirect, string filename_s="") {
-    pnet.LoadEdgeList(filename, undirect, filename_s);
+void LINE::LoadEdgeList(string filename, bool undirect, string filename_s="", int dimensions=128) {
+    pnet.LoadEdgeList(filename, undirect, filename_s, dimensions);
 }
 
 void LINE::SaveWeights(string model_name){

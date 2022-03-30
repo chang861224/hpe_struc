@@ -156,7 +156,7 @@ class proNet {
         double fastSigmoid(double);
 
         // Data Process
-        void LoadEdgeList(string, bool, string);
+        void LoadEdgeList(string, bool, string, int);
         void LoadFieldMeta(string);
 
         vector< int > dynamic_walk;

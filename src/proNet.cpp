@@ -112,7 +112,7 @@ long proNet::SearchHashTable(HashTable& hash_table, char *key) {
 }
 
 
-void proNet::LoadEdgeList(string filename, bool undirect, string filename_s) {
+void proNet::LoadEdgeList(string filename, bool undirect, string filename_s, int dimensions) {
 
     // calculate the total connections
     FILE *fin;
@@ -226,8 +226,8 @@ void proNet::LoadEdgeList(string filename, bool undirect, string filename_s) {
     // Structural informations
     if(filename_s.length()){
         // Load structural embedding
-        vector<vector<double>> weight_struct(MAX_vid, vector<double>(128, 0.0));
-        LoadPreTrain(filename_s, 128, weight_struct);
+        vector<vector<double>> weight_struct(MAX_vid, vector<double>(dimensions, 0.0));
+        LoadPreTrain(filename_s, dimensions, weight_struct);
 
         // Dot product function
         auto dot = [](vector<double> x1, vector<double> x2){
@@ -305,7 +305,7 @@ void proNet::LoadPreTrain(string filename, int tar_dim, vector<vector<double>>& 
         while (fgets(c_line, sizeof(c_line), fin)){
             //get each line
             tok_cnt = 0;
-            char v[160];
+            char v[10000];
             vector <double> emb;
             pch = strtok(c_line," ");
             //each line processing

@@ -87,13 +87,13 @@ int main(int argc, char **argv){
 
     if(structure){
         Struc2vec(network_file, dimensions, undirected);
-        hpe->LoadEdgeList(network_file, undirected, "embedding.emb");
+        hpe->LoadEdgeList(network_file, undirected, "embedding.emb", dimensions);
         remove("random_walks.txt");
         remove("w2v.model");
         remove("embedding.emb");
     }
     else{
-        hpe->LoadEdgeList(network_file, undirected, "");
+        hpe->LoadEdgeList(network_file, undirected, "", dimensions);
     }
 
     hpe->Init(dimensions, load_v, load_c);

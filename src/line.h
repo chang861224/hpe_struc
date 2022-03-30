@@ -27,7 +27,7 @@ class LINE {
 
 
         // data function
-        void LoadEdgeList(string, bool, string);
+        void LoadEdgeList(string, bool, string, int);
         void SaveWeights(string);
         
         // model function
