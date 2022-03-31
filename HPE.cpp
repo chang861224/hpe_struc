@@ -86,6 +86,7 @@ int main(int argc, char **argv){
     hpe = new HPE();
 
     if(structure){
+        cout << "Calculating structural information...." << endl;
         Struc2vec(network_file, dimensions, undirected);
         hpe->LoadEdgeList(network_file, undirected, "embedding.emb", dimensions);
         remove("random_walks.txt");
