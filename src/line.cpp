@@ -1,4 +1,4 @@
-#include "LINE.h"
+#include "line.h"
 #include <omp.h>
 
 LINE::LINE() {
