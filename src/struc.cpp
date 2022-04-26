@@ -2,7 +2,7 @@
 
 void Struc2vec(string filename, int dimension, bool undirected, int num_walks, int walk_length){
     Graph G(filename, undirected);
-    struc2vec model(G, 3);
+    struc2vec model(G, 2);
 
     model.PreprocessNeighborsBFS();
     model.CalDistVertices();
