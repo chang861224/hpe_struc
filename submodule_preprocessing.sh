@@ -1,10 +1,11 @@
+# Get submodule source
 git submodule init
 git submodule update
 
 # smore compile
-# cd src/smore
-# make
-# cd ../../
+cd src/smore
+make
+cd ../../
 
 # struc2vec get submodule and compile 
 cd src/struc2vec
