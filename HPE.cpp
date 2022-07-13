@@ -89,9 +89,9 @@ int main(int argc, char **argv){
         cout << "Calculating structural information...." << endl;
         Struc2vec(network_file, dimensions, undirected);
         hpe->LoadEdgeList(network_file, undirected, "embedding.emb", dimensions);
-        remove("random_walks.txt");
-        remove("w2v.model");
-        remove("embedding.emb");
+        // remove("random_walks.txt");
+        // remove("w2v.model");
+        // remove("embedding.emb");
     }
     else{
         hpe->LoadEdgeList(network_file, undirected, "", dimensions);
